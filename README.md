@@ -1,10 +1,18 @@
 # C++20 无锁内存池 (Lock-Free Memory Pool)
 
+<<<<<<< HEAD
 一个基于 C++20 标准的无锁内存池实现，专为高频、多线程的小块内存分配与释放场景设计，旨在提供比系统默认 `malloc/free` 更高的性能和更低的开销。
 
 ## ✨ 核心特性
 
 - **无锁设计 (Lock-Free)**：基于原子操作实现，避免了线程阻塞，极大提升了高并发场景下的吞吐量。
+=======
+一个基于 C++20 标准的无锁内存池实现，专为高频、多线程的小块内存分配与释放场景设计，旨在提供比系统默认 `malloc/free new/delete` 更高的性能和更低的开销。
+
+## ✨ 核心特性
+
+- **无锁设计 (需平台支持)**：基于原子操作实现，避免了线程阻塞，极大提升了高并发场景下的吞吐量。
+>>>>>>> 802409cb7040a29d61ebdcbf39b030662af53288
 - **C++20 标准**：充分利用现代 C++ 特性，保证代码的先进性与安全性。
 - **固定块大小**：针对特定尺寸的对象进行优化，有效减少内存碎片。
 - **手动扩容**：用户可根据实际需求灵活控制内存的预分配时机。
@@ -39,9 +47,16 @@ cpp
 #include <iostream>
 #include <vector>
 #include <thread>
+<<<<<<< HEAD
 #include "lock_free_memory_pool.hpp" // 假设头文件名为此
 
 int main() {
+=======
+#include "lock_free_memory_pool.hpp" // 假设头文件名为此, 根据实际路径调整
+
+int main()
+{
+>>>>>>> 802409cb7040a29d61ebdcbf39b030662af53288
     // 1. 创建一个管理 64 字节块的内存池
     memory_pool::LockFreeMemoryPool<64> pool;
 
@@ -89,7 +104,11 @@ int main() {
 
 ### 使用 CMake 集成
 在你的 `CMakeLists.txt` 中，确保设置了 C++20 标准：
+<<<<<<< HEAD
 cmake
+=======
+````
+>>>>>>> 802409cb7040a29d61ebdcbf39b030662af53288
 cmake_minimum_required(VERSION 3.10)
 project(MyProject)
 
@@ -97,7 +116,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(my_app src/main.cpp)
+<<<<<<< HEAD
 
+=======
+````
+>>>>>>> 802409cb7040a29d61ebdcbf39b030662af53288
 
 ## 📝 设计与注意事项
 
