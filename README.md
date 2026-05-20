@@ -90,7 +90,7 @@ int main()
 
 ### 使用 CMake 集成
 在你的 `CMakeLists.txt` 中，确保设置了 C++20 标准：
-cmake
+````
 cmake_minimum_required(VERSION 3.10)
 project(MyProject)
 
@@ -98,7 +98,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(my_app src/main.cpp)
-
+````
 
 ## 📝 设计与注意事项
 
