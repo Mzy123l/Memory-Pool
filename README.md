@@ -1,6 +1,6 @@
 # C++20 无锁内存池 (Lock-Free Memory Pool)
 
-一个基于 C++20 标准的无锁内存池实现，专为高频、多线程的小块内存分配与释放场景设计，旨在提供比系统默认 `malloc/free` 更高的性能和更低的开销。
+一个基于 C++20 标准的无锁内存池实现，专为高频、多线程的小块内存分配与释放场景设计，旨在提供比系统默认 `malloc/free new/delete` 更高的性能和更低的开销。
 
 ## ✨ 核心特性
 
@@ -39,9 +39,10 @@ cpp
 #include <iostream>
 #include <vector>
 #include <thread>
-#include "lock_free_memory_pool.hpp" // 假设头文件名为此
+#include "lock_free_memory_pool.hpp" // 假设头文件名为此, 根据实际路径调整
 
-int main() {
+int main()
+{
     // 1. 创建一个管理 64 字节块的内存池
     memory_pool::LockFreeMemoryPool<64> pool;
 
