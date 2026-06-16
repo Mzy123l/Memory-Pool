@@ -99,11 +99,11 @@ int main()
 
 ### 使用 CMake 集成
 在你的 `CMakeLists.txt` 中，确保设置了 C++20 标准：
-<<<<<<< HEAD
+
 cmake
 =======
 ````
->>>>>>> 802409cb7040a29d61ebdcbf39b030662af53288
+
 cmake_minimum_required(VERSION 3.10)
 project(MyProject)
 
