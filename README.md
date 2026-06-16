@@ -44,16 +44,14 @@ cpp
 #include <iostream>
 #include <vector>
 #include <thread>
-<<<<<<< HEAD
 #include "lock_free_memory_pool.hpp" // 假设头文件名为此
 
-int main() {
-=======
+
 #include "lock_free_memory_pool.hpp" // 假设头文件名为此, 根据实际路径调整
 
 int main()
 {
->>>>>>> 802409cb7040a29d61ebdcbf39b030662af53288
+
     // 1. 创建一个管理 64 字节块的内存池
     memory_pool::LockFreeMemoryPool<64> pool;
 
@@ -113,11 +111,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(my_app src/main.cpp)
-<<<<<<< HEAD
+
 
 =======
 ````
->>>>>>> 802409cb7040a29d61ebdcbf39b030662af53288
+
 
 ## 📝 设计与注意事项
 
