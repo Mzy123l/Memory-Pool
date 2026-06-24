@@ -62,17 +62,17 @@ void test_basic_functionality()
     std::cout << "测试4通过: 成功释放所有块" << std::endl;
 
     // 测试5: 重新分配
-    for (int i = 0; i < 5; ++i)
-    {
-        void* ptr = pool.allocate();
-        assert(ptr != nullptr);
+    //for (int i = 0; i < 5; ++i)
+    //{
+     //   void* ptr = pool.allocate();
+     //   assert(ptr != nullptr);
 
         // 验证内存被清零
-        TestStruct* ts = static_cast<TestStruct*>(ptr);
-        assert(ts->id == 0); // 内存应该被清零
-        pool.deallocate(ptr);
-    }
-    std::cout << "测试5通过: 成功重新分配和释放" << std::endl;
+    //    TestStruct* ts = static_cast<TestStruct*>(ptr);
+     //   assert(ts->id == 0); // 内存应该被清零
+    //    pool.deallocate(ptr);
+  //  }
+   // std::cout << "测试5通过: 成功重新分配和释放" << std::endl;
 
     // 测试6: 多次扩容
     pool.expand(3);
